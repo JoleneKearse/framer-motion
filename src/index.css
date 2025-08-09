@@ -35,6 +35,12 @@ h1 {
   line-height: 1.1;
 }
 
+p {
+  font-size: 1.2em;
+  text-wrap: pretty;
+  max-width: 32em;
+}
+
 .buttons-box {
   display: flex;
   width: full;
@@ -85,4 +91,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media screen and (max-width: 600px) {
+ body {
+  padding: 0 1rem;
+ }
+  
 }
