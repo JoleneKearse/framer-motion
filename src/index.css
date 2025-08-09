@@ -44,7 +44,7 @@ p {
 .buttons-box {
   display: flex;
   width: full;
-  height: 200px;
+  height: auto;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
@@ -94,8 +94,7 @@ button:focus-visible {
 }
 
 @media screen and (max-width: 600px) {
- body {
-  padding: 0 1rem;
- }
-  
+  body {
+    padding: 0 1rem;
+  }
 }
