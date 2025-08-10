@@ -8,20 +8,19 @@ import Enter from "./components/Enter";
 import Gesture from "./components/Gesture";
 import Scroll from "./components/Scroll";
 import Layout from "./components/Layout";
-
-type Action = "rotate" | "enter" | "gesture" | "scroll" | "layout" | null;
+import { Action, ActionType } from "./types";
 
 export default function App() {
   const [activeAction, setActiveAction] = useState<Action>(null);
-  const handleClick = (
-    action: "rotate" | "enter" | "gesture" | "scroll" | "layout"
-  ) => {
+  const handleClick = (action: ActionType) => {
     setActiveAction(action);
   };
 
   return (
     <>
-      <h1>Hello, <span className="title-gradient">Framer Motion!</span></h1>
+      <h1>
+        Hello, <span className="title-gradient">Framer Motion!</span>
+      </h1>
       <p>
         Hi y'all! This is simple follow through of the{" "}
         <a
@@ -47,12 +46,38 @@ export default function App() {
         , where I just made it a bit easier for <i>me</i> to understand.
       </p>
       <main>
+        <h2>Animations</h2>
         <ButtonsBox>
-          <Button label="Rotate" color="#ff0088" action="rotate" handleClick={handleClick} />
-          <Button label="Enter" action="enter" color="#dd00ee"handleClick={handleClick} />
-          <Button label="Gesture" color="#A01A7D"action="gesture" handleClick={handleClick} />
-          <Button label="Scroll" color="#FF5A5F"action="scroll" handleClick={handleClick} />
-          <Button label="Layout" color="#9911ff" action="layout" handleClick={handleClick} />
+          <Button
+            label="Rotate"
+            color="#ff0088"
+            action="rotate"
+            handleClick={handleClick}
+          />
+          <Button
+            label="Enter"
+            action="enter"
+            color="#dd00ee"
+            handleClick={handleClick}
+          />
+          <Button
+            label="Gesture"
+            color="#A01A7D"
+            action="gesture"
+            handleClick={handleClick}
+          />
+          <Button
+            label="Scroll"
+            color="#FF5A5F"
+            action="scroll"
+            handleClick={handleClick}
+          />
+          <Button
+            label="Layout"
+            color="#9911ff"
+            action="layout"
+            handleClick={handleClick}
+          />
         </ButtonsBox>
         <AnimationBox>
           {activeAction === "rotate" && <Rotate />}
