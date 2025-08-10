@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import ButtonsBox from "./components/ButtonsBox";
 import Button from "./components/Button";
@@ -13,9 +13,21 @@ import type { ActionType } from "./types";
 
 export default function App() {
   const [activeAction, setActiveAction] = useState<Action>(null);
+  const animationBoxRef = useRef<HTMLDivElement>(null);
+
   const handleClick = (action: ActionType) => {
     setActiveAction(action);
   };
+
+  // Scroll to animation box when activeAction changes
+  useEffect(() => {
+    if (activeAction && animationBoxRef.current) {
+      animationBoxRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [activeAction]);
 
   return (
     <>
@@ -47,7 +59,7 @@ export default function App() {
         , where I just made it a bit easier for <i>me</i> to understand.
       </p>
       <main>
-        <h2>Animations</h2>
+        <h2 className="subtitle-gradient-1">Animations</h2>
         <ButtonsBox>
           <Button
             label="Rotate"
@@ -80,7 +92,7 @@ export default function App() {
             handleClick={handleClick}
           />
         </ButtonsBox>
-        <AnimationBox>
+        <AnimationBox ref={animationBoxRef} isActive={!!activeAction}>
           {activeAction === "rotate" && <Rotate />}
           {activeAction === "enter" && <Enter />}
           {activeAction === "gesture" && <Gesture />}

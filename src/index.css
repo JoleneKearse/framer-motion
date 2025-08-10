@@ -1,5 +1,5 @@
 :root {
-   --pink-hot: #ff0088;
+  --pink-hot: #ff0088;
   --salmon-vibe: #ff5a5f;
   --magenta-deep: #dd00ee;
   --pink-light: #ff33aa;
@@ -7,10 +7,12 @@
   --pink-bright: #ff66b2;
   --magenta-royal: #e600ac;
   --pink-warm: #ff1a75;
-  
+  --yellow-school-bus: #ffdd33;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 1.2em;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -54,6 +56,10 @@ h1 {
   font-size: 3.2em;
 }
 
+h2 {
+  font-size: 2.4em;
+}
+
 .title-gradient {
   background: linear-gradient(90deg, #ff0088, #ff5a5f, #dd00ee);
   background-clip: text;
@@ -61,8 +67,19 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+.subtitle-gradient-1 {
+  background: linear-gradient(
+    90deg,
+    var(--yellow-school-bus),
+    var(--salmon-vibe),
+    var(--pink-fresh)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 p {
-  font-size: 1.2em;
   text-wrap: pretty;
   max-width: 32em;
 }
@@ -84,7 +101,7 @@ main {
 .animation-box {
   display: flex;
   width: full;
-  height: 500px;
+  height: auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
