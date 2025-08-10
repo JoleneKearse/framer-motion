@@ -59,7 +59,7 @@ export default function App() {
         , where I just made it a bit easier for <i>me</i> to understand.
       </p>
       <main>
-        <h2 className="subtitle-gradient-1">Animations</h2>
+        <h2 className="subtitle-1">Animations</h2>
         <ButtonsBox>
           <Button
             label="Rotate"
@@ -99,6 +99,7 @@ export default function App() {
           {activeAction === "scroll" && <Scroll />}
           {activeAction === "layout" && <Layout />}
         </AnimationBox>
+        <h2 className="subtitle-2">Animations Playground</h2>
       </main>
     </>
   );

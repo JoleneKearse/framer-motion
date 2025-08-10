@@ -58,6 +58,7 @@ h1 {
 
 h2 {
   font-size: 2.4em;
+  margin: 3rem 0;
 }
 
 .title-gradient {
@@ -67,7 +68,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-.subtitle-gradient-1 {
+.subtitle-1 {
   background: linear-gradient(
     90deg,
     var(--yellow-school-bus),
@@ -79,13 +80,30 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
+.subtitle-2 {
+  background: linear-gradient(
+    90deg,
+    var(--pink-hot),
+    var(--magenta-deep),
+    var(--pink-bright)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: monospace;
+}
+
+.subtitle-2::before {
+  content: "«";
+}
+
+.subtitle-2::after {
+  content: "»";
+}
+
 p {
   text-wrap: pretty;
   max-width: 32em;
-}
-
-main {
-  margin-top: 3rem;
 }
 
 .buttons-box {
