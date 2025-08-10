@@ -4,7 +4,7 @@ export default function Gestures() {
   return (
     <motion.div
       whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.8, backgroundColor: "#ff00aa" }}
+      whileTap={{ scale: 0.8, backgroundColor: "var(--pink-light)" }}
       style={box}
       onHoverStart={() => console.log('hover started!')}
     />

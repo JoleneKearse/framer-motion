@@ -51,31 +51,31 @@ export default function App() {
         <ButtonsBox>
           <Button
             label="Rotate"
-            color="#ff0088"
+            color="var(--pink-hot)"
             action="rotate"
             handleClick={handleClick}
           />
           <Button
             label="Enter"
             action="enter"
-            color="#dd00ee"
+            color="var(--magenta-deep)"
             handleClick={handleClick}
           />
           <Button
             label="Gesture"
-            color="#A01A7D"
+            color="var(--magenta-royal)"
             action="gesture"
             handleClick={handleClick}
           />
           <Button
             label="Scroll"
-            color="#FF5A5F"
+            color="var(--salmon-vibe)"
             action="scroll"
             handleClick={handleClick}
           />
           <Button
             label="Layout"
-            color="#9911ff"
+            color="var(--pink-warm)"
             action="layout"
             handleClick={handleClick}
           />

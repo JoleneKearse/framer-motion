@@ -1,4 +1,13 @@
 :root {
+   --pink-hot: #ff0088;
+  --salmon-vibe: #ff5a5f;
+  --magenta-deep: #dd00ee;
+  --pink-light: #ff33aa;
+  --pink-fresh: #ff3399;
+  --pink-bright: #ff66b2;
+  --magenta-royal: #e600ac;
+  --pink-warm: #ff1a75;
+  
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
