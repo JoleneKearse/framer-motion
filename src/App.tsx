@@ -8,7 +8,8 @@ import Enter from "./components/Enter";
 import Gesture from "./components/Gesture";
 import Scroll from "./components/Scroll";
 import Layout from "./components/Layout";
-import { Action, ActionType } from "./types";
+import type { Action } from "./types";
+import type { ActionType } from "./types";
 
 export default function App() {
   const [activeAction, setActiveAction] = useState<Action>(null);
@@ -22,7 +23,7 @@ export default function App() {
         Hello, <span className="title-gradient">Framer Motion!</span>
       </h1>
       <p>
-        Hi y'all! This is simple follow through of the{" "}
+        Hi, y'all! This is simple follow through of the{" "}
         <a
           href="https://motion.dev/docs/react"
           target="_blank"
