@@ -13,22 +13,46 @@ type Action = "rotate" | "enter" | "gesture" | "scroll" | "layout" | null;
 
 export default function App() {
   const [activeAction, setActiveAction] = useState<Action>(null);
-  const handleClick = (action: "rotate" | "enter" | "gesture" | "scroll" | "layout") => {
+  const handleClick = (
+    action: "rotate" | "enter" | "gesture" | "scroll" | "layout"
+  ) => {
     setActiveAction(action);
   };
 
   return (
     <>
-      <h1>Hello, Framer Motion!</h1>
-      <p>Hi y'all!  This is simple follow through of the <a href="https://motion.dev/docs/react" target="_blank" rel="noopener noreferrer">docs</a>.  So far everything seems pretty straightforward, although the <b>Scroll</b> & <b>Layout</b> animations are a bit more complex.</p>
-      <p>You can checkout the code in the <i>aforementioned</i> docs or checkout my repo, where I just made it a bit easier for <i>me</i> to understand, at </p>
+      <h1>Hello, <span className="title-gradient">Framer Motion!</span></h1>
+      <p>
+        Hi y'all! This is simple follow through of the{" "}
+        <a
+          href="https://motion.dev/docs/react"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          docs
+        </a>
+        . So far everything seems pretty straightforward, although the{" "}
+        <b>Scroll</b> & <b>Layout</b> animations are a bit more complex.
+      </p>
+      <p>
+        You can checkout the code in the <i>aforementioned</i> docs or checkout
+        my{" "}
+        <a
+          href="https://github.com/JoleneKearse/framer-motion"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          repo
+        </a>
+        , where I just made it a bit easier for <i>me</i> to understand.
+      </p>
       <main>
         <ButtonsBox>
-          <Button label="Rotate" action="rotate" handleClick={handleClick} />
-          <Button label="Enter" action="enter" handleClick={handleClick} />
-          <Button label="Gesture" action="gesture" handleClick={handleClick} />
-          <Button label="Scroll" action="scroll" handleClick={handleClick} />
-          <Button label="Layout" action="layout" handleClick={handleClick} />
+          <Button label="Rotate" color="#ff0088" action="rotate" handleClick={handleClick} />
+          <Button label="Enter" action="enter" color="#dd00ee"handleClick={handleClick} />
+          <Button label="Gesture" color="#A01A7D"action="gesture" handleClick={handleClick} />
+          <Button label="Scroll" color="#FF5A5F"action="scroll" handleClick={handleClick} />
+          <Button label="Layout" color="#9911ff" action="layout" handleClick={handleClick} />
         </ButtonsBox>
         <AnimationBox>
           {activeAction === "rotate" && <Rotate />}

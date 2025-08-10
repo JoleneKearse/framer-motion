@@ -1,12 +1,13 @@
 type ButtonProps = {
   label: string;
+  color: string;
   action: "rotate" | "enter" | "gesture" | "scroll" | "layout";
   handleClick: (action: "rotate" | "enter" | "gesture" | "scroll" | "layout") => void;
 };
 
-const Button = ({ label, action, handleClick }: ButtonProps) => {
+const Button = ({ label, color, action, handleClick }: ButtonProps) => {
   return (
-    <button onClick={() => handleClick(action)}>
+    <button onClick={() => handleClick(action)} style={{ backgroundColor: color }}>
       {label} 
     </button>
   );
